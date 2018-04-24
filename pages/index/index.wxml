@@ -1,0 +1,9 @@
+<!--index.wxml-->
+<view class="container">
+<image src="/images/index.png" class='image'></image>
+<p class="head">上海科技大学</p>
+<p class="head">地下车库导航</p>
+  <view class="list">
+    <button bindtap="toDetail">进入地图</button>
+  </view>
+</view>

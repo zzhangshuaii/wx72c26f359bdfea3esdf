@@ -1,0 +1,15 @@
+<!--scale.wxml-->
+<view class="container">
+
+<view class="hint">
+  <view >请点右上角，用微信自带工具<image src='/images/arrow2.png' class="image"></image></view>
+  <view >扫描二维码</view>
+</view>
+<canvas class='map' canvas-id="firstCanvas"
+            disable-scroll="false"
+            bindtouchstart="touchStart"
+            bindtouchmove="touchMove"
+            bindtouchend="touchEnd"
+            ></canvas>
+<button bindtap='onLoad'>还原地图</button>
+</view>

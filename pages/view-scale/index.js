@@ -24,7 +24,7 @@ var startang = 0;
 var angle = 0;
 var diff_ang = 0;
 var last_diff_ang = 0;
-var src = "../../images/map.jpg"
+var src = "../../images/map_s.jpg"
 var arrow = "../../images/arrow.png"
 var context = wx.createCanvasContext('firstCanvas')
 
@@ -257,7 +257,7 @@ Page({
     angle = 0;
     diff_ang = 0;
     last_diff_ang = 0;
-    src = "../../images/map.jpg"
+    src = "../../images/map_s.jpg"
     arrow = "../../images/arrow.png"
     context = wx.createCanvasContext('firstCanvas')
 

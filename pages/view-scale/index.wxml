@@ -1,15 +1,25 @@
 <!--scale.wxml-->
 <view class="container">
 
-<view class="hint">
-  <view >请点右上角，用微信自带工具<image src='/images/arrow2.png' class="image"></image></view>
-  <view >扫描二维码</view>
-</view>
+
 <canvas class='map' canvas-id="firstCanvas"
             disable-scroll="false"
             bindtouchstart="touchStart"
             bindtouchmove="touchMove"
             bindtouchend="touchEnd"
-            ></canvas>
-<button bindtap='onLoad'>还原地图</button>
+            >
+  <cover-view class="circle" bindtap='onLoad'>
+  <!-- <button class="circle" bindtap='onLoad'> -->
+    还原
+  <!-- </button> -->
+  </cover-view>
+
+  <cover-view class="hint">
+    <cover-view >请点右上角，用微信自带工具<cover-image src='/images/arrow2.png' class="image"></cover-image></cover-view>
+    <cover-view >扫描二维码</cover-view>
+  </cover-view>
+</canvas>
+
+
+
 </view>

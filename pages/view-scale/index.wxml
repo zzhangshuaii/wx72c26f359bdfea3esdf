@@ -10,7 +10,7 @@
             >
   <cover-view class="circle" bindtap='onLoad'>
   <!-- <button class="circle" bindtap='onLoad'> -->
-    还原
+  <cover-view class="target icon"></cover-view>
   <!-- </button> -->
   </cover-view>
 

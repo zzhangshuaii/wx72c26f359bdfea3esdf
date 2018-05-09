@@ -10,7 +10,7 @@
             >
   <cover-view class="circle" bindtap='onLoad'>
   <!-- <button class="circle" bindtap='onLoad'> -->
-  <cover-view class="target icon"></cover-view>
+  <cover-image src="/images/location.png" class="target icon"></cover-image>
   <!-- </button> -->
   </cover-view>
 

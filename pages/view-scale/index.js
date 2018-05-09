@@ -16,6 +16,12 @@ const PI = 3.14159;
 // the arrow location and direction
 var a_x = 100;
 var a_y = 100;
+var liftA1_x = 160;
+var liftA1_y = 250;
+var liftA2_x = 260;
+var liftA2_y = 250;
+var liftA3_x = 360;
+var liftA3_y = 250;
 var a_a = 3*PI/4;
 
 var startX = 0;
@@ -26,6 +32,9 @@ var diff_ang = 0;
 var last_diff_ang = 0;
 var src = "../../images/map_s.jpg"
 var arrow = "../../images/arrow.png"
+var liftA1 = "../../images/lift.png"
+var liftA2 = "../../images/lift.png"
+var liftA3 = "../../images/lift.png"
 var context = wx.createCanvasContext('firstCanvas')
 
 Page({
@@ -117,6 +126,12 @@ Page({
       // recalc the arrow location
       a_x = a_x * ratio;
       a_y = a_y * ratio ;
+      liftA1_x = liftA1_x * ratio;
+      liftA1_y = liftA1_y * ratio;
+      liftA2_x = liftA2_x * ratio;
+      liftA2_y = liftA2_y * ratio;
+      liftA3_x = liftA3_x * ratio;
+      liftA3_y = liftA3_y * ratio;
 
 
       /*
@@ -240,6 +255,12 @@ Page({
     }
     a_x=100;
     a_y=100;
+    liftA1_x=180;
+    liftA1_y=280;
+    liftA2_x = 290;
+    liftA2_y = 284;
+    liftA3_x = 300;
+    liftA3_y = 130;
     a_a=3*PI/4;
     beta = 0;
     ratio = 1;
@@ -259,6 +280,10 @@ Page({
     last_diff_ang = 0;
     src = "../../images/map_s.jpg"
     arrow = "../../images/arrow.png"
+    liftA1 = "../../images/lift.png"
+    liftA2 = "../../images/lift.png"
+    liftA3 = "../../images/lift.png"
+
     context = wx.createCanvasContext('firstCanvas')
 
     this.draw()
@@ -302,7 +327,9 @@ Page({
     //context.rotate(diff_ang)
 
     context.drawImage(src, 0, 0, i_width, i_height)
-    
+    context.drawImage(liftA1, liftA1_x-17, liftA1_y-35, 35, 35)
+    context.drawImage(liftA2, liftA2_x - 17, liftA2_y - 35, 35, 35)
+    context.drawImage(liftA3, liftA3_x - 17, liftA3_y - 35, 35, 35)
     //context.drawImage(arrow, a_x, a_y, 100, 100)
     
     

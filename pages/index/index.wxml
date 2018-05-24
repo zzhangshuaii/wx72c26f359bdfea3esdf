@@ -4,6 +4,7 @@
 <p class="head">上海科技大学</p>
 <p class="head">地下车库导航</p>
   <view class="list">
+    <button bindtap="getQRcode">扫描二维码</button>
     <button bindtap="toDetail">进入地图</button>
   </view>
 </view>

@@ -25,5 +25,6 @@ App({
     }
   },
   globalData:{
+    location: 0
   }
 })

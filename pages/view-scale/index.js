@@ -14,15 +14,20 @@ var i_height = 480;
 const PI = 3.14159;
 
 // the arrow location and direction
-var a_x = 100;
-var a_y = 100;
+var location_x= new Array(-100,300,200);
+var location_y= new Array(-100,200,200);
+var a_x = location_x[app.globalData.location];
+var a_y = location_y[app.globalData.location];
+var path_x = new Array(100,300,300,400);
+var path_y = new Array(100,90,200,200);
+
 var liftA1_x = 160;
 var liftA1_y = 250;
 var liftA2_x = 260;
 var liftA2_y = 250;
 var liftA3_x = 360;
 var liftA3_y = 250;
-var a_a = 3*PI/4;
+var a_a = PI/4;
 
 var startX = 0;
 var startY = 0;
@@ -125,7 +130,11 @@ Page({
 
       // recalc the arrow location
       a_x = a_x * ratio;
-      a_y = a_y * ratio ;
+      a_y = a_y * ratio;
+      for (var i = 0; i < path_x.length; i++) {
+        path_x[i] = path_x[i] * ratio;
+        path_y[i] = path_y[i] * ratio;
+      }
       liftA1_x = liftA1_x * ratio;
       liftA1_y = liftA1_y * ratio;
       liftA2_x = liftA2_x * ratio;
@@ -232,6 +241,7 @@ Page({
     context.rotate(0)
     */
   },
+
   touchEnd: function (e) {
 
   },
@@ -253,15 +263,18 @@ Page({
     a_x = option.ax;
     a_y = option.ay;
     }
-    a_x=100;
-    a_y=100;
+
+    a_x = location_x[app.globalData.location];
+    a_y = location_y[app.globalData.location];
+    path_x = new Array(100, 300, 300, 400, 400);
+    path_y = new Array(100, 90, 200, 200, 400);
     liftA1_x=180;
     liftA1_y=280;
     liftA2_x = 290;
     liftA2_y = 284;
     liftA3_x = 300;
     liftA3_y = 130;
-    a_a=3*PI/4;
+    a_a=PI/4;
     beta = 0;
     ratio = 1;
     dis;
@@ -288,13 +301,28 @@ Page({
 
     this.draw()
   },
+
+  canvas_path:function(context, x_array,y_array){
+    context.beginPath()
+    context.setStrokeStyle("#4090FF")
+    context.setLineWidth(8)
+    context.setLineCap('round')
+    for (var i = 0; i < x_array.length-1; i++) {
+      context.moveTo(x_array[i], y_array[i]);
+      context.lineTo(x_array[i+1], y_array[i+1]);
+    }
+    
+
+    context.stroke()
+  },
+
   canvas_arrow:function(context, fromx, fromy, angle){
     
     var tox = fromx + 100 * Math.cos(angle)
     var toy = fromy + 100 * Math.sin(angle)
 
     context.beginPath()
-    context.setGlobalAlpha(0.7)
+    //context.setGlobalAlpha(0.7)
     context.setFillStyle("#3399ff")
     context.arc(fromx, fromy, 20, 0, 2 * Math.PI)
     context.fill()
@@ -314,6 +342,7 @@ Page({
 
     context.stroke()
   },
+
   draw: function () {
     context.setFontSize(20)
     var a = beta / PI * 180
@@ -337,6 +366,8 @@ Page({
     //context.moveTo(a_x,a_y)
     //context.lineTo(a_x + 100 * Math.cos(a_a), a_y + 100 * Math.sin(a_a))
     this.canvas_arrow(context, a_x, a_y, a_a)
+
+    this.canvas_path(context, path_x,path_y)
     
 
     context.draw()

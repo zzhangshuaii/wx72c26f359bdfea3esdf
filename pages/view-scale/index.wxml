@@ -14,10 +14,10 @@
   <!-- </button> -->
   </cover-view>
 
-  <cover-view class="hint">
+  <!-- <cover-view class="hint">
     <cover-view >请点右上角，用微信自带工具<cover-image src='/images/arrow2.png' class="image"></cover-image></cover-view>
     <cover-view >扫描二维码</cover-view>
-  </cover-view>
+  </cover-view>  -->
 </canvas>
 
 

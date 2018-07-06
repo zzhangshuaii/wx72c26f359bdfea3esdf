@@ -127,9 +127,45 @@
   font-size:20px;
   /* box-shadow: 2px 2px 4px rgba(0,0,0,0.3); */
 }
+.BoxBottom2 {
+  border-radius:2vw;
+  bottom:20vw;
+  z-index: 100;
+  right: 2vw;
+  left: 2vw;
+  position:fixed ;
+
+  background-color:#2699FB;
+  width:91vw; 
+  padding-top: 22px;
+  padding-left: 5vw;
+  /* padding-left: 20px; */
+  height:47px;
+  color:white;
+  font-size:20px;
+  /* box-shadow: 2px 2px 4px rgba(0,0,0,0.3); */
+}
 .BoxShadow {
   /* border-radius:2vw; */
   bottom:0.5vw;
+  /* z-index: 100; */
+  right: 0.5vw;
+  left: 1.5vw;
+  position:fixed ;
+
+  /* background-color:#2699FB; */
+  width:98vw; 
+  padding-top: 30px;
+  /* padding-left: 20px; */
+  height:75px;
+  /* color:white; */
+
+  opacity:0.3;
+  /* box-shadow: 2px 2px 4px rgba(0,0,0,0.3); */
+}
+.BoxShadow2 {
+  /* border-radius:2vw; */
+  bottom:18.5vw;
   /* z-index: 100; */
   right: 0.5vw;
   left: 1.5vw;

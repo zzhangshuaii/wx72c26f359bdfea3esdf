@@ -10,8 +10,24 @@
             >
   <cover-view class="titleBar">  Navigator   </cover-view>
   <cover-image src="/images/shadowBar.png" class="titleShadow">     </cover-image>
+
+
+  <scroll-view scroll-y style="height: 200px;" bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+      <view id="green" class="scroll-view-item bc_green"></view>
+      <view id="red"  class="scroll-view-item bc_red"></view>
+      <view id="yellow" class="scroll-view-item bc_yellow"></view>
+      <view id="blue" class="scroll-view-item bc_blue"></view>
+  </scroll-view>
+
+
+
+
   <cover-image src="/images/boxshadow.png" class="BoxShadow">     </cover-image>
-  <cover-view class="BoxBottom" >LOST?</cover-view>
+  <cover-image src="/images/boxshadow.png" class="BoxShadow" style='bottom: 18.5vw'>     </cover-image>
+  <cover-view class="BoxBottom" >Where to go?</cover-view>
+
+  <cover-view class="BoxBottom" style='bottom: 20vw' >You are at XXX{{app.globalData.location}}</cover-view>
+  
   <!-- <cover-view class="circle" bindtap='onLoad'> -->
   
   
@@ -20,8 +36,8 @@
   <!-- </button> -->
   <!-- </cover-view> -->
 
-  <cover-view class="QRscan" bindtap='getQRcode'><cover-image src="/images/location.png" class="target icon"></cover-image>  </cover-view>
-  
+  <cover-view class="QRscan" bindtap='getQRcode'><cover-image src="/images/location.png" class="target icon"></cover-image>  </cover-view> 
+ 
   <!-- <cover-view class="hint">
     <cover-view >请点右上角，用微信自带工具<cover-image src='/images/arrow2.png' class="image"></cover-image></cover-view>
     <cover-view >扫描二维码</cover-view>

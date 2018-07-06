@@ -373,16 +373,11 @@ Page({
     context.draw()
   },
   getQRcode: function (event) {
-    wx.scanCode({
-      success: (res) => {
-        console.log(res);
-        app.globalData.location = res.result;
+    
         wx.navigateTo({
-          url: '/pages/view-scale-located/index',
+          url: '/pages/view-scale-chose/index',
         })
-      }
-    })
-
+  
   },
 
 

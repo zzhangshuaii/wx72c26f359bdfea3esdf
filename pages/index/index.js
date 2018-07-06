@@ -24,5 +24,10 @@ Page({
   },
   onLoad: function () {
     console.log('onLoad');
+    wx.navigateTo({
+      // url: '/pages/view-scale/index',
+      url: '/pages/view-scale-chose/index',
+      
+    })
   }
 })

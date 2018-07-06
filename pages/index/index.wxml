@@ -1,5 +1,7 @@
 <!--index.wxml-->
+
 <view class="container">
+<view class="titleBar">  Navigator   </view>
 <image src="/images/index.png" class='image'></image>
 <p class="head">上海科技大学</p>
 <p class="head">地下车库导航</p>
